@@ -8,7 +8,7 @@ Processing all that in one single process will take too much time,
 
 This file is text, so you can read it easily but the content is made of multiline blocks.
 
-Use the `validate.sh` script to make sure the files tou generate are the same as the source files.
+Use the `validate.sh` script to make sure the files you generate are the same as the source files.
 
 
 Step 1
