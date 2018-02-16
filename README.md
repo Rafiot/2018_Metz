@@ -8,7 +8,7 @@ Processing all that in one single process will take too much time,
 
 This file is text, so you can read it easily but the content is made of multiline blocks.
 
-Use the validate.sh script to make sure the files tou generate are the same as the source files.
+Use the `validate.sh` script to make sure the files tou generate are the same as the source files.
 
 
 Step 1
@@ -17,10 +17,10 @@ Step 1
 Figuring out a separator write a file split it in 10 independent files of the same-ish size
 
 Tools required:
-* vim (look at the file -> find a separator)
-* grep (figure out how many entries we have
-* wc (count the amout of blocks)
-* bc (compute things -> amout of blocks /file)
+* `vim` (look at the file -> find a separator)
+* `grep` (figure out how many entries we have
+* `wc` (count the amout of blocks)
+* `bc` (compute things -> amout of blocks /file)
 
 Write some code to do that.
 
@@ -28,8 +28,8 @@ Step 2
 ------
 
 Rewrite it, but better:
-* function with parameters (source_file_name, separator, output_name)
-* make it a script (see __main__, __name__)
+* function with parameters (`source_file_name`, `separator`, `output_name`)
+* make it a script (see `__main__`, `__name__`)
 
 Step 3
 ------
@@ -41,14 +41,14 @@ Or we want to split it in more/less files?
     (i.e. we have more CPUs at hand and can process more files at once)
 
 Python modules
-* re (regex, replaces grep)
+* `re` (regex, replaces `grep`)
 
 Method:
-* len (replaces wc)
+* `len` (replaces `wc`)
 
 1. count the total amount of blocks (in another method)
 2. Divide it by the number of files
-3. Update the file_split method addordingly
+3. Update the `file_split` method accordingly
 
 
 Step 4
@@ -64,11 +64,11 @@ Step 5
 
 We're getting there. Let's do some refactoring now to make the code more pythonesque.
 
-* use the with open ... as ...: syntax when possible
+* use the `with open ... as ...:` syntax when possible
 * Use format instead of concatenating text
-* Use round on entries_per_file
-* Add some logging (see the logging module)
-* Use argparse to make the script more flexible
+* Use `round` on entries_per_file
+* Add some logging (see the `logging` module)
+* Use `argparse` to make the script more flexible
 
 Step 6
 ------
@@ -78,8 +78,8 @@ Let's think a bit how we can make this code more efficient.
 Why do we compute the mount of entries? Do we need that? What about using the size of the file instead?
 
 Methods:
-* file.seek
-* file.tell
+* `file.seek`
+* `file.tell`
 
 
 Step 7
@@ -112,5 +112,5 @@ Step 9 ++
 
 If you're fast and bored:
 * Make it a class (with comments)
-* Yield pseudo files (BytesIO) instead of writing the files on the disk
+* Yield pseudo files (`BytesIO`) instead of writing the files on the disk
 
