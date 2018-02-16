@@ -10,6 +10,20 @@ This file is text, so you can read it easily but the content is made of multilin
 
 Use the `validate.sh` script to make sure the files you generate are the same as the source files.
 
+Step 0
+------
+
+Clone this repo:
+
+```bash
+git clone https://github.com/Rafiot/2018_Metz.git
+```
+
+Get the dataset:
+```bash
+./get_dataset.sh
+```
+
 
 Step 1
 ------
